@@ -91,8 +91,8 @@ flowchart LR
 
 ## Publication GitHub
 
-Aucune publication n’est effectuée. Créer un dépôt à partir de **ce dossier** pour
-que `.github/workflows/ci.yml` soit à la racine. Le ZIP brut et le CSV complet sont
+Dépôt public : [AdnaneEDr/electricity-forecasting-anomaly-detection](https://github.com/AdnaneEDr/electricity-forecasting-anomaly-detection).
+Le workflow `.github/workflows/ci.yml` est à la racine du dépôt. Le ZIP brut et le CSV complet sont
 ignorés ; leur téléchargement reproductible reste disponible. Les données dérivées
 doivent conserver l’attribution UCI CC BY 4.0. Le code original est sous licence MIT.
 La CI réalise lint et tests, sans téléchargement ni entraînement complet.
