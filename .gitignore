@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+data/uci.zip
+data/hourly.csv
+data/prepared_hourly.csv
+inference/
+*.log

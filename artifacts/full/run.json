@@ -1,0 +1,189 @@
+{
+  "mode": "full",
+  "n": 34588,
+  "train": 20752,
+  "validation": 6918,
+  "test": 6918,
+  "imputed": 437,
+  "MASE_train_denominator": 0.6925232249330625,
+  "ridge_tuning": [
+    {
+      "alpha": 1.0,
+      "validation_MAE": 0.5234004560357066
+    },
+    {
+      "alpha": 100.0,
+      "validation_MAE": 0.5227585534211013
+    },
+    {
+      "alpha": 1000.0,
+      "validation_MAE": 0.5209153738818435
+    }
+  ],
+  "ets_tuning": [
+    {
+      "days": 14,
+      "validation_MAE": 0.5426677237407523
+    },
+    {
+      "days": 28,
+      "validation_MAE": 0.516081637777157
+    }
+  ],
+  "thresholds": {
+    "Robuste": 7.7347255899998455,
+    "Autoencodeur": 0.6506973105669022
+  },
+  "injections": {
+    "calibration": [
+      {
+        "kind": "pic",
+        "position": 21311,
+        "duration_h": 3,
+        "amplitude_kw": 2.8762227538042726,
+        "seed": 43
+      },
+      {
+        "kind": "chute",
+        "position": 22696,
+        "duration_h": 8,
+        "amplitude_kw": 2.8762227538042726,
+        "seed": 43
+      },
+      {
+        "kind": "niveau",
+        "position": 24076,
+        "duration_h": 24,
+        "amplitude_kw": 2.8762227538042726,
+        "seed": 43
+      },
+      {
+        "kind": "derive",
+        "position": 25456,
+        "duration_h": 36,
+        "amplitude_kw": 2.8762227538042726,
+        "seed": 43
+      },
+      {
+        "kind": "constant",
+        "position": 26845,
+        "duration_h": 24,
+        "amplitude_kw": 2.8762227538042726,
+        "seed": 43
+      }
+    ],
+    "test": [
+      {
+        "kind": "pic",
+        "position": 28231,
+        "duration_h": 3,
+        "amplitude_kw": 2.7928088737179873,
+        "seed": 44
+      },
+      {
+        "kind": "chute",
+        "position": 29608,
+        "duration_h": 8,
+        "amplitude_kw": 2.7928088737179873,
+        "seed": 44
+      },
+      {
+        "kind": "niveau",
+        "position": 30999,
+        "duration_h": 24,
+        "amplitude_kw": 2.7928088737179873,
+        "seed": 44
+      },
+      {
+        "kind": "derive",
+        "position": 32377,
+        "duration_h": 36,
+        "amplitude_kw": 2.7928088737179873,
+        "seed": 44
+      },
+      {
+        "kind": "constant",
+        "position": 33764,
+        "duration_h": 24,
+        "amplitude_kw": 2.7928088737179873,
+        "seed": 44
+      }
+    ]
+  },
+  "forecast": [
+    {
+      "model": "ETS",
+      "MAE": 0.552189313515497,
+      "RMSE": 0.7403578605401726,
+      "MASE": 0.797358548615998
+    },
+    {
+      "model": "Naïve",
+      "MAE": 0.695123608926942,
+      "RMSE": 0.9364857947657564,
+      "MASE": 1.0037549412066735
+    },
+    {
+      "model": "Ridge direct",
+      "MAE": 0.4662996954256166,
+      "RMSE": 0.6102853555742765,
+      "MASE": 0.6733343787433091
+    },
+    {
+      "model": "Saisonnière 24h",
+      "MAE": 0.5348250908123091,
+      "RMSE": 0.7703680191577439,
+      "MASE": 0.7722846997138673
+    }
+  ],
+  "synthetic": [
+    {
+      "split": "calibration",
+      "method": "Robuste",
+      "precision": 0.13541666666666666,
+      "recall": 0.1368421052631579,
+      "F1": 0.13612565445026178,
+      "PR_AUC_AP": 0.06344882410899291,
+      "event_recall": 0.6,
+      "mean_delay_h_detected": 12.666666666666666,
+      "false_positive_hours": 83,
+      "events_detected": 3
+    },
+    {
+      "split": "calibration",
+      "method": "Autoencodeur",
+      "precision": 0.0,
+      "recall": 0.0,
+      "F1": 0.0,
+      "PR_AUC_AP": 0.015044214583360789,
+      "event_recall": 0.0,
+      "mean_delay_h_detected": null,
+      "false_positive_hours": 72,
+      "events_detected": 0
+    },
+    {
+      "split": "test",
+      "method": "Robuste",
+      "precision": 0.18018018018018017,
+      "recall": 0.21052631578947367,
+      "F1": 0.1941747572815534,
+      "PR_AUC_AP": 0.1294356159365802,
+      "event_recall": 0.8,
+      "mean_delay_h_detected": 8.75,
+      "false_positive_hours": 91,
+      "events_detected": 4
+    },
+    {
+      "split": "test",
+      "method": "Autoencodeur",
+      "precision": 0.0,
+      "recall": 0.0,
+      "F1": 0.0,
+      "PR_AUC_AP": 0.01743474266186788,
+      "event_recall": 0.0,
+      "mean_delay_h_detected": null,
+      "false_positive_hours": 44,
+      "events_detected": 0
+    }
+  ]
+}

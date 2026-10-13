@@ -1,0 +1,1 @@
+{"seed": 42, "horizon": 24, "window": 48, "epochs_quick": 12, "epochs_full": 40, "validation_origins_quick": 14, "test_origins_quick": 28}

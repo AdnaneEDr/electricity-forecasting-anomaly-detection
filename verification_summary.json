@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-13",
+  "tests": "13 passed",
+  "lint": "passed",
+  "pip_check": "passed",
+  "http_health": 200,
+  "example_import_rows": 200,
+  "export_forecast_rows": 24,
+  "trained_modes": [
+    "quick",
+    "full"
+  ]
+}
